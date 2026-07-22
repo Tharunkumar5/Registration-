@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>College Admission Form</title>
+<link rel="stylesheet" href="registe.css">
+</head>
+<body>
+
+<div class="container">
+
+    <h1>College Admission Form</h1>
+
+    <form id="admissionForm">
+
+        <div class="row">
+            <div class="input-box">
+                <label>Full Name</label>
+                <input type="text" required>
+            </div>
+
+            <div class="input-box">
+                <label>Email</label>
+                <input type="email" required>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="input-box">
+                <label>Mobile Number</label>
+                <input type="tel" required>
+            </div>
+
+            <div class="input-box">
+                <label>Date of Birth</label>
+                <input type="date" required>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="input-box">
+                <label>Gender</label>
+                <select required>
+                    <option>Select Gender</option>
+                    <option>Male</option>
+                    <option>Female</option>
+                    <option>Other</option>
+                </select>
+            </div>
+
+            <div class="input-box">
+                <label>Department</label>
+                <select required>
+                    <option>Select Department</option>
+                    <option>CSE</option>
+                    <option>EEE</option>
+                    <option>ECE</option>
+                    <option>Mechanical</option>
+                    <option>Civil</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="input-box">
+            <label>Address</label>
+            <textarea rows="4"></textarea>
+        </div>
+
+        <div class="input-box">
+            <label>Upload Marksheet</label>
+            <input type="file">
+        </div>
+
+        <button type="submit">Register</button>
+
+    </form>
+
+</div>
+
+<div id="successBox">
+    <h1>🎉 Thank You!</h1>
+    <p>Your College Application has been Registered Successfully.</p>
+    <button onclick="location.reload()">Register Another Student</button>
+</div>
+
+<script>
+
+document.getElementById("admissionForm").addEventListener("submit",function(e){
+
+e.preventDefault();
+
+document.querySelector(".container").style.display="none";
+document.getElementById("successBox").style.display="block";
+
+});
+
+</script>
+
+</body>
+</html>
